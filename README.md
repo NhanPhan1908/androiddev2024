@@ -12,5 +12,5 @@ Student Info
 
 * Name: Phan Dang Nhan
 * ID: BI12-336
-* Group ID: 23
-* Project Name: *Your Project Name here*
+* Group ID: 
+* 
