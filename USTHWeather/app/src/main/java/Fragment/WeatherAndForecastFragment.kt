@@ -1,0 +1,4 @@
+package Fragment
+
+class WeatherAndForecastFragment {
+}
