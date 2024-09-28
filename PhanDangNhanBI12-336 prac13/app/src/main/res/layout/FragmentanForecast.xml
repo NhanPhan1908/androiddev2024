@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <!-- Phần hiển thị thứ, ngày tháng và icon thời tiết -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="#FF0000FF">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/day_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/date_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 September 2023"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_weather_icon"
+            android:contentDescription="Weather icon"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Phần thông tin thời tiết -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:id="@+id/weather_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#2000FF00">
+
+            <TextView
+                android:id="@+id/weather_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Weather: Sunny, 25°C"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Phần container dự báo thời tiết -->
+    <FrameLayout
+        android:id="@+id/forecast_container"
+        android:layout_width="match_parent"
+        android:layout_weight="1"/>
+</LinearLayout>
